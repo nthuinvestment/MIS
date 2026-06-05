@@ -239,16 +239,11 @@ price = clean_close_data(price)
 
 
 
-#原本資料
-close2 = pd.read_csv("data/close_clean.csv", encoding='utf-8-sig', index_col=0, parse_dates=True)
-combined_close2 = pd.concat([close2, price] ,join='outer', ignore_index=False).drop_duplicates(keep='last')
-combined_close2.to_csv("data/close_clean.csv", encoding='utf-8-sig' )
+path = "data/close_clean.csv"   # 這一行請用英文輸入法重打,不要複製貼上
 
-
-print("進度: 所有資料已準備就緒。")
-
-
-
+close2 = pd.read_csv(path, encoding='utf-8-sig', index_col=0, parse_dates=True)
+combined_close2 = pd.concat([close2, price], join='outer', ignore_index=False).drop_duplicates(keep='last')
+combined_close2.to_csv(path, encoding='utf-8-sig')
 
 
 
