@@ -249,4 +249,3 @@ combined_close2.to_csv(path, encoding='utf-8-sig')
 
 
 
-
